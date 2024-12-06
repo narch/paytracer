@@ -27,11 +27,9 @@ Paytracer.configure do |config|
   config.password = "YOUR_PASSWORD"
   config.integrator_id = "YOUR_INTEGRATOR_ID"
   # Optional, defaults to false
-  config.sandbox = true
+  config.sandbox = Rails.env.development?
 end
 ```
-
-All additional requests will require an access token.
 
 ### Creating An Access Token
 
@@ -45,6 +43,9 @@ Current token expiration is 2 hours.
 ```ruby
 expiration = token.expires_in
 ```
+
+>[!NOTE]
+> All subsequent requests require an integrator_id. If you have configured the integrator_id in the initializer, you don’t need to include it in each request—the gem will handle it automatically.
 
 ### Creating A Client
 
