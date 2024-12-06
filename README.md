@@ -36,8 +36,14 @@ All additional requests will require an access token.
 ### Creating An Access Token
 
 ```ruby
-response = Paytracer::AccessToken.create
-token = response.access_token
+token = Paytracer::AccessToken.create
+access_token = token.access_token
+```
+
+Current token expiration is 2 hours.
+
+```ruby
+expiration = token.expires_in
 ```
 
 ### Creating A Client
@@ -53,6 +59,14 @@ client.customers.create({})
 client.customers.update({})
 client.customers.delete(customer_id)
 client.customers.export({})
+```
+
+### Sale Transactions
+
+```ruby
+client.sale.create({})
+client.sale.by_customer.create({})
+client.sale.by_transaction.create({})
 ```
 
 ## Contributing
