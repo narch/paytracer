@@ -28,8 +28,7 @@ module Paytracer
     end
 
     def url
-      SANDBOX_BASE_URL
-      #Paytracer.configuration.sandbox ? SANDBOX_BASE_URL : BASE_URL
+      Paytracer.configuration.sandbox ? SANDBOX_BASE_URL : BASE_URL
     end
 
     def customer
