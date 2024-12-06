@@ -44,14 +44,14 @@ Current token expiration is 2 hours.
 expiration = token.expires_in
 ```
 
->[!NOTE]
-> All subsequent requests require an integrator_id. If you have configured the integrator_id in the initializer, you don’t need to include it in each request—the gem will handle it automatically.
-
 ### Creating A Client
 
 ```ruby
 client = Paytracer::Client.new(access_token: token)
 ```
+
+>[!NOTE]
+> All subsequent requests require an integrator_id. If you have configured the integrator_id in the initializer, you don’t need to include it in each request—the gem will handle it automatically.
 
 ### Customers
 
