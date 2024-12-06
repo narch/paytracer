@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.paytrace.com/v1/transactions/sale/by_transaction
+    body:
+      encoding: UTF-8
+      string: '{"integrator_id":"<INTEGRATOR_ID>","transaction_id":"125391265","amount":19.95}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 05 Dec 2024 23:05:29 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      cache-control:
+      - max-age=0, private, must-revalidate
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      x-permitted-cross-domain-policies:
+      - none
+      x-xss-protection:
+      - 0, 1; mode=block
+      x-request-id:
+      - 19b1ca0c-57bb-4450-a5fb-8d4fc6138fa3
+      x-download-options:
+      - noopen
+      etag:
+      - W/"7132578a63392e64ca094684db9e316d"
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-runtime:
+      - '19.164333'
+      x-content-type-options:
+      - nosniff, nosniff
+      content-security-policy:
+      - frame-ancestors 'self';
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"response_code":101,"status_message":"Your transaction
+        was successfully approved.","transaction_id":125391270,"approval_code":"TAS358","approval_message":"  NO  MATCH
+        - Approved and completed","avs_response":"No Match","csc_response":"","external_transaction_id":""}'
+  recorded_at: Thu, 05 Dec 2024 23:05:29 GMT
+recorded_with: VCR 6.2.0

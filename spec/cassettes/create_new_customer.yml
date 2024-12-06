@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.paytrace.com/v1/customer/create
+    body:
+      encoding: UTF-8
+      string: '{"integrator_id":"<INTEGRATOR_ID>","customer_id":"1733439821","credit_card":{"number":"4012000098765439","expiration_month":"12","expiration_year":"2026"},"billing_address":{"name":"Nathan
+        Williams","street_address":"1234 Main St.","city":"Los Angeles","state":"CA","zip":"90210"}}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      User-Agent:
+      - Faraday v2.9.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Thu, 05 Dec 2024 23:04:10 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      cache-control:
+      - max-age=0, private, must-revalidate
+      referrer-policy:
+      - strict-origin-when-cross-origin
+      x-permitted-cross-domain-policies:
+      - none
+      x-xss-protection:
+      - 0, 1; mode=block
+      x-request-id:
+      - 1f18da39-33e6-4bce-9d1c-084bfcfac475
+      x-download-options:
+      - noopen
+      etag:
+      - W/"c8dcc6d024bcc0b34179b38b1ac3a947"
+      x-frame-options:
+      - SAMEORIGIN, SAMEORIGIN
+      x-runtime:
+      - '12.173070'
+      x-content-type-options:
+      - nosniff, nosniff
+      content-security-policy:
+      - frame-ancestors 'self';
+    body:
+      encoding: UTF-8
+      string: '{"success":true,"response_code":160,"status_message":"The customer
+        profile for 1733439821/Nathan Williams was successfully created.","customer_id":"1733439821","masked_card_number":"xxxxxxxxxxxx5439"}'
+  recorded_at: Thu, 05 Dec 2024 23:04:11 GMT
+recorded_with: VCR 6.2.0
