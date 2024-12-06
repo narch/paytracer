@@ -27,12 +27,17 @@ module Paytracer
     end
 
     def self.handle_response(response)
-      return response.body if [200, 201].include?(response.status)
-      if (400..451).include?(response.status)
-        raise Error, "#{response.body["error"]} - #{response.body["error_description"]}"
-      else 
+      case response.status
+      when 200, 201
+        # Convert the response body into a Paytracer::Object
+        Paytracer::Object.new(response.body)
+      when 400..451
+        # Raise an error for client-side issues
+        raise Error, "#{response.body['error']} - #{response.body['error_description']}"
+      else
+        # Raise a generic error for server-side problems
         raise Error, "We were unable to perform the request due to server-side problems."
       end
-    end
+    end    
   end
 end

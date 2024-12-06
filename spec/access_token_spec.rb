@@ -8,7 +8,7 @@ RSpec.describe Paytracer::AccessToken do
     it "creates a new access token" do
       VCR.use_cassette("create access token") do
         token = Paytracer::AccessToken.create(username: ENV["PT_TEST_USERNAME"], password: ENV["PT_TEST_PASSWORD"])
-        expect(token["access_token"]).to eq("<ACCESS_TOKEN>")
+        expect(token.access_token).to eq("<ACCESS_TOKEN>")
       end
     end
   end

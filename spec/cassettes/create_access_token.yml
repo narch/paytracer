@@ -17,7 +17,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Thu, 05 Dec 2024 22:52:31 GMT
+      - Fri, 06 Dec 2024 18:57:51 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -37,21 +37,21 @@ http_interactions:
       x-xss-protection:
       - 0, 1; mode=block
       x-request-id:
-      - de7be102-34f5-48c1-be30-f1e4f9ff3a00
+      - 1e021e94-d74c-40ee-8ae2-2d450de1b6d8
       x-download-options:
       - noopen
       etag:
-      - W/"d26c08230487306fbaaa0124748616e4"
+      - W/"72fb0069d7db36014f494c9c0e22fde4"
       x-frame-options:
       - SAMEORIGIN, SAMEORIGIN
       x-runtime:
-      - '0.202758'
+      - '0.280393'
       x-content-type-options:
       - nosniff, nosniff
       content-security-policy:
       - frame-ancestors 'self';
     body:
       encoding: UTF-8
-      string: '{"access_token":"<ACCESS_TOKEN>","token_type":"Bearer","expires_in":7200,"created_at":1733439151}'
-  recorded_at: Thu, 05 Dec 2024 22:52:31 GMT
+      string: '{"access_token":"<ACCESS_TOKEN>","token_type":"Bearer","expires_in":7200,"created_at":1733511471}'
+  recorded_at: Fri, 06 Dec 2024 18:57:51 GMT
 recorded_with: VCR 6.2.0
